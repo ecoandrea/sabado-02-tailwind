@@ -16,7 +16,6 @@ const CardSocial = ({
     className={`
     bg-[#F0F3FA] 
     rounded-mb 
-    border-t-8 
     ${borderTop}  p-6  text-center hover:bg-gray-500/20 transition-all cursor-pointer`}
   >
     <div className="flex justify-center items-center">
@@ -36,34 +35,38 @@ const CardSocial = ({
 const App = () => {
   return (
     <div className="container mx-auto grid place-content-center min-h-screen">
-      <h1>Social media Dashboard</h1>
-      <p>Total Followers 23,004</p>
-
       <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <CardSocial
           iconSocial={iconFacebook}
           icon={iconUp}
-          borderTop="border-blue-500"
+          borderTop={
+            "relative before:absolute before:inset-0 before:h-2 before:rounded-t-md before:bg-gradient-to-r before:from-[#FDB55D] before:to-[#DE428B]"
+          }
           dataNumber={"1986"}
         />
         <CardSocial
           iconSocial={iconTwitter}
           icon={iconUp}
-          borderTop="border-green-500"
+          borderTop={
+            "relative before:absolute before:inset-0 before:h-2 before:rounded-t-md before:bg-gradient-to-r before:from-[#FDB55D] before:to-[#DE428B]"
+          }
           dataNumber={"100"}
         />
         <CardSocial
           iconSocial={iconInstagram}
           icon={iconUp}
-          borderTop="border-pink-500"
+          borderTop={
+            "relative before:absolute before:inset-0 before:h-2 before:rounded-t-md before:bg-gradient-to-r before:from-[#FDB55D] before:to-[#DE428B]"
+          }
           dataNumber={"3500"}
         />
         <CardSocial
           iconSocial={iconYoutube}
           icon={iconDown}
-          borderTop="border-red-500"
+          borderTop={
+            "relative before:absolute before:inset-0 before:h-2 before:rounded-t-md before:bg-gradient-to-r before:from-[#FDB55D] before:to-[#DE428B]"
+          }
           dataNumber={"200"}
-          colorTextToday="text-red-500"
         />
       </section>
     </div>
